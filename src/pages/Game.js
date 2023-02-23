@@ -6,6 +6,7 @@ import Header from '../components/Header';
 import Question from '../components/Question';
 import Answers from '../components/Answers';
 import Timer from '../components/Timer';
+import '../style/Game.css';
 import { thunkQuestions, score } from '../redux/action';
 
 class Game extends React.Component {
@@ -133,33 +134,41 @@ class Game extends React.Component {
       : (
         <div>
           <Header />
-          {
-            questions.length > 0
-            && (
-              <div>
-                <Question question={ questions[questionIndex] } />
-                <Answers
-                  timer={ timer }
-                  answered={ answered }
-                  answers={ answers }
-                  isDisabled={ isDisabled }
-                  testResponse={ this.testResponse }
+          <div className="container-question">
+            <div className="container-game">
+              <div className="container-layout">
+                {
+                  questions.length > 0
+                  && (
+                    <div className="layout-questions-answer">
+                      <br />
+                      <Question question={ questions[questionIndex] } />
+                      <Answers
+                        timer={ timer }
+                        answered={ answered }
+                        answers={ answers }
+                        isDisabled={ isDisabled }
+                        testResponse={ this.testResponse }
+                      />
+                    </div>)
+                }
+                <Timer
+                  handleTimer={ timer }
                 />
-              </div>)
-          }
-          {
-            (answered || timer === 0) && (
-              <button
-                data-testid="btn-next"
-                onClick={ () => this.nextQuestion() }
-              >
-                Next
-              </button>
-            )
-          }
-          <Timer
-            handleTimer={ timer }
-          />
+              </div>
+              {
+                (answered || timer === 0) && (
+                  <button
+                    data-testid="btn-next"
+                    className="next-question-btn"
+                    onClick={ () => this.nextQuestion() }
+                  >
+                    Next
+                  </button>
+                )
+              }
+            </div>
+          </div>
         </div>)
     );
   }

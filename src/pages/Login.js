@@ -2,6 +2,8 @@ import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { loginOk, thunkToken } from '../redux/action';
+import img from '../trivia.png';
+import '../style/Login.css';
 
 class Login extends React.Component {
   constructor() {
@@ -57,46 +59,52 @@ class Login extends React.Component {
       return playerName.length >= minName;
     }
     return (
-      <main>
-        <label htmlFor="input-name">
-          Nome:
-          <input
-            type="text"
-            id="input-name"
-            value={ name }
-            name="name"
-            onChange={ this.handleChange }
-            data-testid="input-player-name"
-          />
-        </label>
-        <br />
-        <label htmlFor="input-email">
-          Email:
-          <input
-            type="email"
-            id="input-email"
-            value={ email }
-            name="email"
-            onChange={ this.handleChange }
-            data-testid="input-gravatar-email"
-          />
-        </label>
-        <br />
-        <button
-          type="submit"
-          data-testid="btn-play"
-          disabled={ !validateEmail(email) || !validateName(name) }
-          onClick={ () => this.handleSubmit() }
-        >
-          Play
-        </button>
-        <button
-          type="submit"
-          data-testid="btn-settings"
-          onClick={ () => this.handleSubmitSet() }
-        >
-          Settings
-        </button>
+      <main className="main">
+        <div className="form">
+          <img src={ img } alt="trivia" />
+          <div className="infos">
+            <input
+              className="input is-rounded name"
+              placeholder="Digite seu nome"
+              type="text"
+              id="input-name"
+              value={ name }
+              name="name"
+              onChange={ this.handleChange }
+              data-testid="input-player-name"
+            />
+            <br />
+            <input
+              className="input is-rounded email"
+              placeholder="Digite seu email"
+              type="email"
+              id="input-email"
+              value={ email }
+              name="email"
+              onChange={ this.handleChange }
+              data-testid="input-gravatar-email"
+            />
+          </div>
+          <div className="buttons-container">
+            <button
+              className="button-play"
+              type="submit"
+              data-testid="btn-play"
+              disabled={ !validateEmail(email) || !validateName(name) }
+              onClick={ () => this.handleSubmit() }
+            >
+              Play
+            </button>
+            <button
+              className="button-submit"
+              type="submit"
+              data-testid="btn-settings"
+              onClick={ () => this.handleSubmitSet() }
+            >
+              Settings
+            </button>
+          </div>
+        </div>
       </main>
     );
   }

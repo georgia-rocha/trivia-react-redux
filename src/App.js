@@ -5,6 +5,8 @@ import Settings from './pages/Settings';
 import Game from './pages/Game';
 import Feedback from './pages/Feedback';
 import Ranking from './pages/Ranking';
+import NotFound from './pages/NotFound';
+import './App.css';
 
 class App extends React.Component {
   render() {
@@ -16,6 +18,7 @@ class App extends React.Component {
           <Route exact path="/game" component={ Game } />
           <Route exact path="/feedback" component={ Feedback } />
           <Route exact path="/Ranking" component={ Ranking } />
+          <Route path="*" component={ NotFound } />
         </Switch>
       </div>
 

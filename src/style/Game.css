@@ -1,0 +1,116 @@
+.container-question {
+  height: 100vh;
+  width: 100vw;
+  background-image: url("../capa.png");
+  position: absolute;
+}
+
+.container-game {
+  background-color: rgb(50, 51, 53);
+  border-radius: 3rem;
+  color: rgb(250, 249, 249);
+  display: flex;
+  flex-direction: column;
+  height: 70vh;
+  justify-content: center;
+  margin-left: 8rem;
+  margin-top: 4rem;
+  padding: 6rem 4rem;
+  width: 80vw;
+}
+
+.answer-options {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  width: 40vw;
+  height: 100%;
+  padding: 1rem;
+}
+
+.answer-options button{
+  padding: 0.5rem;
+  border-radius: 2rem;
+  margin: 0.5rem;
+}
+
+.option{
+  background-color: white;
+  color: black;
+  font-size: 1rem;
+}
+
+.container-layout{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.layout-questions-answer{
+  height: 50vh;
+  width: 45vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: -10rem;
+}
+
+.option:hover{
+  -webkit-box-shadow: 0px 0px 4px 2px rgba(39, 10, 135, 1);
+  -moz-box-shadow: 0px 0px 4px 2px rgba(39, 10, 135, 1);
+  box-shadow: 0px 0px 4px 2px rgba(39, 10, 135, 1);
+}
+
+.wrong-answer{
+  background-color: white;
+  color: black;
+  background-color: rgb(187, 125, 125);
+  font-size: 1rem;
+  border: 3px solid red;
+}
+
+.wrong-answer:hover{
+  -webkit-box-shadow: 0px 0px 4px 2px rgba(39, 10, 135, 1);
+  -moz-box-shadow: 0px 0px 4px 2px rgba(39, 10, 135, 1);
+  box-shadow: 0px 0px 4px 2px rgba(39, 10, 135, 1);
+}
+
+.correct-answer{
+  color: black;
+  border: 3px solid rgb(6, 240, 15);
+  background-color: rgb(145, 202, 145);
+  font-size: 1rem;
+}
+
+.correct-answer:hover{
+  -webkit-box-shadow: 0px 0px 4px 2px rgba(39, 10, 135, 1);
+  -moz-box-shadow: 0px 0px 4px 2px rgba(39, 10, 135, 1);
+  box-shadow: 0px 0px 4px 2px rgba(39, 10, 135, 1);
+}
+.correct-answer:active{
+  background-color: green;
+}
+
+.next-question-btn {
+  background: linear-gradient(90deg, rgba(94, 35, 134, 1) 18%, rgba(253, 29, 29, 1) 78%, rgba(253, 29, 146, 1) 97%);
+  border-radius: 2rem;
+  color: white;
+  font-size: larger;
+  padding: 0.4rem;
+  margin-top: 0.9rem
+}
+
+.next-question-btn:hover {
+  background: linear-gradient(90deg, rgba(253, 29, 146, 1) 2%, rgba(253, 29, 29, 1) 25%, rgba(94, 35, 134, 1) 75%);
+  -webkit-box-shadow: 0px 0px 4px 2px rgba(39, 10, 135, 1);
+  -moz-box-shadow: 0px 0px 4px 2px rgba(39, 10, 135, 1);
+  box-shadow: 0px 0px 4px 2px rgba(39, 10, 135, 1);
+}
+
+.time{
+  padding: 1rem ;
+  font-size: larger;
+  margin-top: 3rem;
+  margin-left: 100%;
+  font-size: 5rem;
+}

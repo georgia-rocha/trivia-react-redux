@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import md5 from 'crypto-js/md5';
 import { resetScore } from '../redux/action';
 import Header from '../components/Header';
+import '../style/Feedback.css';
 
 class Feedback extends React.Component {
   constructor() {
@@ -51,26 +52,43 @@ class Feedback extends React.Component {
   }
 
   render() {
-    const { player: { assertions, score } } = this.props;
+    const { player: { assertions, score, gravatarEmail }, name } = this.props;
+    const avatar = md5(gravatarEmail).toString();
     const { message } = this.state;
     return (
-      <div>
+      <div className="feedback">
         <Header />
-        <h2 data-testid="feedback-text">{ message }</h2>
-        <h2 data-testid="feedback-total-question">{ assertions }</h2>
-        <h2 data-testid="feedback-total-score">{ score }</h2>
-        <button
-          data-testid="btn-play-again"
-          onClick={ () => this.handleRedirect('') }
-        >
-          Play Again
-        </button>
-        <button
-          data-testid="btn-ranking"
-          onClick={ () => this.handleRedirect('Ranking') }
-        >
-          Ranking
-        </button>
+        <div className="feedback-container">
+          <img src={ `https://www.gravatar.com/avatar/${avatar}` } alt={ name } className="img-user" />
+          <div className="feedback-infos">
+            <h2>{ name }</h2>
+            <h2 data-testid="feedback-text">{ message }</h2>
+            <h2 data-testid="feedback-total-question">
+              Assertions:
+              { assertions }
+            </h2>
+            <h2 data-testid="feedback-total-score">
+              Points:
+              { score }
+            </h2>
+          </div>
+          <div className="feedback-btns">
+            <button
+              data-testid="btn-play-again"
+              className="btn-play-again"
+              onClick={ () => this.handleRedirect('') }
+            >
+              Play Again
+            </button>
+            <button
+              className="btn-ranking"
+              data-testid="btn-ranking"
+              onClick={ () => this.handleRedirect('Ranking') }
+            >
+              Ranking
+            </button>
+          </div>
+        </div>
       </div>
     );
   }

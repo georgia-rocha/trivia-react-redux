@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import '../style/Ranking.css';
 
 class Ranking extends React.Component {
   constructor() {
@@ -30,23 +31,33 @@ class Ranking extends React.Component {
     console.log(ranking);
 
     return (
-      <div>
-        <h1 data-testid="ranking-title">Ranking</h1>
-        {
-          ranking.map((rank, index) => (
-            <div key={ index }>
-              <img src={ rank.gravatar } alt={ rank.name } />
-              <p data-testid={ `player-name-${index}` }>{rank.name}</p>
-              <p data-testid={ `player-score-${index}` }>{rank.score}</p>
-            </div>
-          ))
-        }
-        <button
-          data-testid="btn-go-home"
-          onClick={ () => history.push('/') }
-        >
-          Go Home
-        </button>
+      <div className="ranking-page">
+        <div className="container-ranking">
+          <h1 data-testid="ranking-title" className="ranking-title">Ranking</h1>
+          <ul className="users-container">
+            {
+              ranking.map((rank, index) => (
+                <li key={ index } className="users">
+                  <img className="img-ranking" src={ rank.gravatar } alt={ rank.name } />
+                  <p data-testid={ `player-name-${index}` }>{rank.name}</p>
+                  <p
+                    className="score"
+                    data-testid={ `player-score-${index}` }
+                  >
+                    {rank.score}
+                  </p>
+                </li>
+              ))
+            }
+          </ul>
+          <button
+            data-testid="btn-go-home"
+            className="btn-go-home"
+            onClick={ () => history.push('/') }
+          >
+            Go Home
+          </button>
+        </div>
       </div>
     );
   }

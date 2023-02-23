@@ -1,19 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import '../style/answers.css';
 
 class Answers extends React.Component {
   render() {
     const { answers, answered, testResponse, isDisabled, timer } = this.props;
     return (
-      <div data-testid="answer-options">
+      <div data-testid="answer-options" className="answer-options">
         {
           answers && answers
             .map((answer) => (
               <button
                 data-testid={ answer.dataTest }
                 key={ answer.answers }
-                className={ (answered || timer === 0) ? answer.style : '' }
+                className={ (answered || timer === 0) ? answer.style : 'option' }
                 onClick={ () => testResponse(answer.dataTest) }
                 disabled={ isDisabled }
               >

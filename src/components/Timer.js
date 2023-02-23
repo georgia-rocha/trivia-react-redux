@@ -6,8 +6,7 @@ class Timer extends React.Component {
     const { handleTimer } = this.props;
     return (
       <div>
-        <p>Timer</p>
-        <p>{ handleTimer }</p>
+        <p className="time">{ handleTimer }</p>
       </div>
     );
   }

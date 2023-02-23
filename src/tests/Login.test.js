@@ -65,7 +65,15 @@ describe ('Login', () => {
         expect(playBtn).toBeEnabled();
       })
 
-    test('Testa se o botão play redireciona para a página "/game" e chama a função fetch', () => {
+      it('Se é redirecionado para "Settings"', () => {
+        const { history } = renderWithRouterAndRedux(<App />);
+
+        const btnConf = screen.getByRole('button', { name: /Settings/i});
+        userEvent.click(btnConf);
+       expect(history.location.pathname).toBe('/settings');
+    })
+
+    it('Testa se o botão play redireciona para a página "/game" e chama a função fetch', () => {
         const mockToken = {
             token: 'ab98a9va8e9a8f9ae'
         }
@@ -89,11 +97,5 @@ describe ('Login', () => {
         });
       })
 
-    it('Se é redirecionado para "Settings"', () => {
-        const { history } = renderWithRouterAndRedux(<App />);
-
-        const btnConf = screen.getByRole('button', { name: /Settings/i});
-        userEvent.click(btnConf);
-       expect(history.location.pathname).toBe('/settings');
-    })
+   
 });

@@ -1,0 +1,86 @@
+.ranking-page {
+  height: 100vh;
+  width: 100vw;
+  background-image: url("../capa.png");
+  background-repeat: repeat, repeat-x;
+  background-position: top right, center;
+  background-size: 50%;
+  align-items: center;
+}
+
+.container-ranking {
+  height: 100vh;
+  width: 80vw;
+  background-color: rgb(50, 51, 53);
+  border-radius: 3rem;
+  color: rgb(250, 249, 249);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 4rem;
+  margin-left: 10%;
+}
+
+.ranking-title {
+  font-size: 3rem;
+  text-align: center;
+}
+
+.img-ranking {
+  width: 3rem;
+  border-radius: 2rem;
+  margin-left: 1.2rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  align-items: center;
+}
+
+.score{
+  margin-right: 2rem;
+}
+
+.users-container{
+  background-color: rgb(80, 82, 83);
+  border-radius: 3rem;
+  display: flex;
+  flex-direction: column;
+  width: 60vw;
+  height: 80vh;
+  
+}
+
+.users {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.users:hover{
+  border-radius: 2rem;
+  background-color: rgb(113, 116, 116);
+  -webkit-box-shadow: 0px 0px 4px 2px rgba(39, 10, 135, 1);
+  -moz-box-shadow: 0px 0px 4px 2px rgba(39, 10, 135, 1);
+  box-shadow: 0px 0px 4px 2px rgba(39, 10, 135, 1);
+}
+
+.btn-go-home {
+  background: linear-gradient(90deg, rgba(94, 35, 134, 1) 18%, rgba(253, 29, 29, 1) 78%, rgba(253, 29, 146, 1) 97%);
+  outline: none;
+  color: white;
+  border: none;
+  width: 60vw;
+  height: 2.4rem;
+  cursor: pointer;
+  border-radius: 5px;
+  margin: 1rem;
+  font-size: 1.5rem;
+}
+
+.btn-go-home:hover {
+  background: linear-gradient(90deg, rgba(253, 29, 146, 1) 2%, rgba(253, 29, 29, 1) 25%, rgba(94, 35, 134, 1) 75%);
+  -webkit-box-shadow: 0px 0px 4px 2px rgba(39, 10, 135, 1);
+  -moz-box-shadow: 0px 0px 4px 2px rgba(39, 10, 135, 1);
+  box-shadow: 0px 0px 4px 2px rgba(39, 10, 135, 1);
+}

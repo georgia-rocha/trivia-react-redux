@@ -7,8 +7,9 @@ class Question extends React.Component {
     const { question } = this.props;
 
     return question && (
-      <div>
+      <div className="question">
         <p data-testid="question-category">{ question.category }</p>
+        <br />
         <p data-testid="question-text">{ question.question }</p>
       </div>
     );

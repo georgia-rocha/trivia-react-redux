@@ -1,0 +1,44 @@
+.settings-container {
+  height: 100vh;
+  width: 100vw;
+  background-image: url("../capa.png");
+  background-repeat: repeat, repeat-x;
+  background-position: top right, center;
+  background-size: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.settings{
+  background-color: rgb(80, 82, 83);
+  height: 80vh;
+  width: 60vw;
+  text-align: center;
+  border-radius: 5rem;
+  font-size: 3rem;
+  color: white;
+}
+
+.text-settings{
+  padding: 2rem;
+}
+
+.btn-go-home-settings {
+  background: linear-gradient(90deg, rgba(94, 35, 134, 1) 18%, rgba(253, 29, 29, 1) 78%, rgba(253, 29, 146, 1) 97%);
+  outline: none;
+  color: white;
+  border: none;
+  width: 50vw;
+  margin-top: 15%;
+  height: 2.4rem;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.btn-go-home-settings:hover {
+  background: linear-gradient(90deg, rgba(253, 29, 146, 1) 2%, rgba(253, 29, 29, 1) 25%, rgba(94, 35, 134, 1) 75%);
+  -webkit-box-shadow: 0px 0px 4px 2px rgba(39, 10, 135, 1);
+  -moz-box-shadow: 0px 0px 4px 2px rgba(39, 10, 135, 1);
+  box-shadow: 0px 0px 4px 2px rgba(39, 10, 135, 1);
+}
