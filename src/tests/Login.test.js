@@ -20,7 +20,7 @@ describe ('Login', () => {
         renderWithRouterAndRedux(<App />);
         const USER_NAME = 'User Test';
 
-        const nomeInput = screen.getByLabelText(/^Nome:$/i);
+        const nomeInput = screen.getByTestId('input-player-name');
         expect(nomeInput).toBeInTheDocument();
         userEvent.type(nomeInput, USER_NAME)
         expect(nomeInput.value).toBe(USER_NAME)
@@ -30,7 +30,7 @@ describe ('Login', () => {
         renderWithRouterAndRedux(<App />);
         const USER_EMAIL = 'user@example.com';
         
-        const emailEL = screen.getByLabelText(/^Email:$/i);
+        const emailEL = screen.getByTestId('input-gravatar-email');
         expect(emailEL).toBeInTheDocument();
         userEvent.type(emailEL, USER_EMAIL)
         expect(emailEL.value).toBe(USER_EMAIL)
