@@ -3,8 +3,6 @@
 
 ![img](trivia2.gif)
 
-Link Deploy: https://georgia-rocha.github.io/trivia-react-redux
-
 <summary><strong>O que foi desenvolvido</strong></summary><br />
   Foi desenvolvido um jogo de perguntas e respostas baseado no jogo **Trivia** utilizando _React e Redux_;
 
