@@ -31,10 +31,6 @@ O que a aplicação faz?
 * Foram feitas daily meeting para organização e produção do projeto, a maior parte do projeto foi feito em pair programming, mas o time sempre estava disponivel para resolucionar problemas quando apareciam;
 * Os teste ficaram em 81%, mas ainda planejo conseguir os 95%, para fechar os 100%;
 
-<summary>Parte que desenvolvi:</summary>
-
-* Fiquei responsavél pelo css e pela criação da page Game em conjunto com outro participante do time, maior dificuldade foi o requisito 8, pois estava alterando o funcionamento de outros requisitos;
-
 # Requisitos Obrigatórios 100%
 
 - [x] 1. Crie a tela de login, onde a pessoa que joga deve preencher as informações para iniciar um jogo
@@ -72,8 +68,6 @@ O que a aplicação faz?
 - [x] 17. Desenvolva testes para atingir 90% de cobertura da tela de Feedbacks
 
 ## Tela de ranking
-
->Obs: É necessário que a página de Ranking tenha o caminho `src/pages/Ranking.js`
 
 - [x] 18. Crie um botão para ir ao início
 
