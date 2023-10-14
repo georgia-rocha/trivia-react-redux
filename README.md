@@ -80,18 +80,3 @@ O que a aplicação faz?
 - [x] 19. Crie o conteúdo da tela de _ranking_
 
 - [x] 20. Desenvolva testes para atingir 90% de cobertura da tela de Ranking
-
-## Testes da tela de jogo
-
-- [ ] 21. Desenvolva testes para atingir 90% de cobertura da tela de Jogo
-
-- [ ] 22. Desenvolva testes para atingir 95% de cobertura total
-
-
-# Requisitos não avaliativos
-
-## Tela de configurações
-
-- [ ] 23. Ao mudar o valor do dropdown categoria, apenas perguntas da categoria selecionada devem aparecer para a pessoa que está jogando. Essa configuração será identificada pela chave category no retorno da API;
-- [ ] 24. Ao mudar o valor do dropdown dificuldade, apenas perguntas da dificuldade selecionada devem aparecer para a pessoa que está jogando. Essa configuração será identificada pela chave difficulty no retorno da API;
-- [ ] 25. Ao mudar o valor do dropdown tipo, apenas perguntas do tipo selecionado devem aparecer para a pessoa que está jogando. Essa configuração será identificada pela chave type no retorno da API.
